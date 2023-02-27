@@ -9,7 +9,7 @@ Archinstall uses zram by default. I have been experiencing constant freezing wit
 - <https://github.com/archlinux/archinstall/issues/1399>
 
 ## Fix the fstab file created by Archinstall
-A known archinstall bug causes the fstab file to be created with Windows-style line endings (CRLF). This causes the system to sometimes fail to boot. To fix this, run the following commands:
+A known archinstall [bug](https://github.com/archlinux/archinstall/issues/1399) causes the fstab file to be created with Windows-style line endings (CRLF). This causes the system to sometimes fail to boot. To fix this, run the following commands:
 ```
 # mv /etc/fstab /root/fstab.broken
 # tr -d '\015' < /root/fstab.broken > /etc/fstab
